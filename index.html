@@ -16,8 +16,12 @@
 
   REGEL
     Jobb kun innenfor DIN egen START/SLUTT-blokk under.
-    Skal du endre <head>, base.css eller en annen sin blokk:
-    ta det opp i gruppen først.
+    Skal du endre <head>, base.css, <main>/<footer>-taggene eller en
+    annen sin blokk: ta det opp i gruppen først.
+
+  MERK
+    Seksjon 1-6 ligger inne i <main>. Footeren ligger utenfor, fordi den
+    ikke er en del av hovedinnholdet. Sebastian har derfor to blokker.
 
   Se docs/arbeidsflyt.md for git-rutinene.
   ============================================================================
@@ -39,6 +43,12 @@
   <link rel="stylesheet" href="css/sebastian.css">
 </head>
 <body>
+
+<!-- FELLES: lar tastaturbrukere hoppe forbi navbaren. Synlig kun ved tab. -->
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+<!-- FELLES: <main> omslutter seksjon 1-6. Lukkes etter Sebastians seksjon 6. -->
+<main id="innhold">
 
 
 <!-- ==========================================================================
@@ -117,15 +127,31 @@
   -->
 
 
+<!-- ####  SEBASTIAN - SLUTT  #### -->
+
+
+<!-- FELLES: her lukkes <main>. Footeren hører ikke hjemme inni den. -->
+</main>
+
+
+<!-- ==========================================================================
+     ####  SEBASTIAN - FOOTER START  ####
+     branch: sebastian
+     CSS:    css/sebastian.css
+     ========================================================================== -->
+
   <!-- ---------- SEKSJON 7: FOOTER ----------
+       Bruk <footer> som ytterste element her.
        Innhold ifølge designbildet:
          - copyright til venstre
          - logo midtstilt
          - fire runde sosiale ikoner til høyre
+       Ikonene trenger lesbar tekst for skjermlesere. Legg teksten i en
+       <span class="visually-hidden"> inni hver lenke, f.eks. "Instagram".
        TODO Sebastian
   -->
 
-<!-- ####  SEBASTIAN - SLUTT  #### -->
+<!-- ####  SEBASTIAN - FOOTER SLUTT  #### -->
 
 
 </body>
