@@ -1,0 +1,62 @@
+/* ============================================================================
+   SEBASTIAN.CSS
+
+   EIER:   Sebastian
+   BRANCH: sebastian
+   SEKSJONER:
+     5. To kort med tekst over bilde
+     6. Fullbredde banner
+     7. Footer
+
+   Ingen andre redigerer denne filen. Trenger du en endring her, si fra.
+   Bruk variablene fra base.css, ikke skriv farger rett inn.
+   ============================================================================ */
+
+
+/* ==========================================================================
+   SEKSJON 5 - TO KORT MED TEKST OVER BILDE
+   ========================================================================== */
+
+/* .cards  .cards__grid
+   TODO                                                                      */
+
+/* .card  .card__img
+   Bildet ligger bak teksten. Du trenger et mørkt lag mellom dem for at
+   teksten skal være lesbar.
+   TODO                                                                      */
+
+/* .card__body  .card__title
+   TODO                                                                      */
+
+
+/* ==========================================================================
+   SEKSJON 6 - FULLBREDDE BANNER
+   Bildet går helt ut til kanten, uten .container rundt.
+   ========================================================================== */
+
+/* .banner  .banner__img  .caption--overlay
+   TODO                                                                      */
+
+
+/* ==========================================================================
+   SEKSJON 7 - FOOTER
+   Tre kolonner: copyright venstre, logo midtstilt, ikoner høyre.
+   ========================================================================== */
+
+/* .footer  .footer__grid
+   TODO                                                                      */
+
+/* .footer__copy  .footer__logo  .footer__social
+   TODO                                                                      */
+
+
+/* ==========================================================================
+   RESPONSIVT - Sebastians seksjoner
+   Brekkpunkter vi har blitt enige om: 900px (tablet) og 700px (mobil).
+   ========================================================================== */
+
+/* @media (max-width: 900px)
+   TODO                                                                      */
+
+/* @media (max-width: 700px)
+   TODO                                                                      */

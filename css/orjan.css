@@ -1,0 +1,55 @@
+/* ============================================================================
+   ORJAN.CSS
+
+   EIER:   Ørjan
+   BRANCH: orjan
+   SEKSJONER:
+     3. NASA Insight med videoplayer
+     4. Why Mars? med bildecollage
+
+   Ingen andre redigerer denne filen. Trenger du en endring her, si fra.
+   Bruk variablene fra base.css, ikke skriv farger rett inn.
+   ============================================================================ */
+
+
+/* ==========================================================================
+   SEKSJON 3 - NASA INSIGHT
+   Stor versal-overskrift, videoplayer i full bredde, to tekstspalter under.
+   ========================================================================== */
+
+/* .insight
+   TODO                                                                      */
+
+/* .video  .video__poster  .video__play
+   Play-knappen sentreres oppå bildet. Husk at transform må gjentas i
+   hover-regelen, ellers hopper knappen ut av posisjon.
+   TODO                                                                      */
+
+/* .cols
+   TODO                                                                      */
+
+
+/* ==========================================================================
+   SEKSJON 4 - WHY MARS?
+   Tekst til venstre, collage av tre overlappende bilder til høyre.
+   ========================================================================== */
+
+/* .why  .why__grid
+   TODO                                                                      */
+
+/* .why__collage  .why__frame  .why__img
+   Overlappende bilder kan løses med grid-area på et grid med flere ruter enn
+   bilder. z-index bestemmer hvem som ligger øverst.
+   TODO                                                                      */
+
+
+/* ==========================================================================
+   RESPONSIVT - Ørjans seksjoner
+   Brekkpunkter vi har blitt enige om: 900px (tablet) og 700px (mobil).
+   ========================================================================== */
+
+/* @media (max-width: 900px)
+   TODO                                                                      */
+
+/* @media (max-width: 700px)
+   TODO                                                                      */

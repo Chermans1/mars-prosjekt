@@ -1,0 +1,55 @@
+/* ============================================================================
+   CHRISTIAN.CSS
+
+   EIER:   Christian
+   BRANCH: christian
+   SEKSJONER:
+     1. Hero med navbar
+     2. Split med overlappende bildestabel
+
+   Ingen andre redigerer denne filen. Trenger du en endring her, si fra.
+   Bruk variablene fra base.css, ikke skriv farger rett inn.
+   ============================================================================ */
+
+
+/* ==========================================================================
+   SEKSJON 1 - HERO
+   Bakgrunnsbilde i full bredde, innhold i venstre halvdel.
+   Husk et lag mellom bilde og tekst, ellers blir teksten uleselig.
+   ========================================================================== */
+
+/* .hero
+   TODO                                                                      */
+
+/* .hero__bg
+   TODO                                                                      */
+
+/* .nav  .nav__logo  .nav__links
+   TODO                                                                      */
+
+/* .hero__content  .hero__title  .hero__text
+   TODO                                                                      */
+
+
+/* ==========================================================================
+   SEKSJON 2 - SPLIT
+   To kolonner. Grå flate som stikker ut bak bildet til venstre.
+   ========================================================================== */
+
+/* .split  .split__grid
+   TODO                                                                      */
+
+/* .split__media  .split__frame  .split__img
+   TODO                                                                      */
+
+/* .split__body
+   TODO                                                                      */
+
+
+/* ==========================================================================
+   RESPONSIVT - Christians seksjoner
+   Brekkpunkter vi har blitt enige om: 900px (tablet) og 700px (mobil).
+   ========================================================================== */
+
+/* @media (max-width: 700px)
+   TODO                                                                      */

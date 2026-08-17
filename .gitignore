@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# Editorer
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Node (hvis dere legger til verktøy senere)
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-error.log*
+
+# Bygg og midlertidige filer
+dist/
+build/
+*.log
+*.tmp
+
+# Lokale miljøvariabler
+.env
+.env.local
