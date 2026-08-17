@@ -63,6 +63,21 @@
 .nav__links afocus-visible {
   color: var(--text);
 }
+
+.hero__content {
+  margin-top: auto;
+  padding-bottom: var(--space-2x1);
+}
+
+.hero__title {
+  max-width: 14ch;
+}
+
+.hero__text {
+  max-width: 46ch;
+  margin-top: var(--space-md);
+}
+
 /* ==========================================================================
    SEKSJON 2 - SPLIT
    To kolonner. Grå flate som stikker ut bak bildet til venstre.
