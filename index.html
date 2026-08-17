@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
   ============================================================================
   MISSION TO MARS - gruppeoppgave
@@ -27,37 +27,37 @@
   ============================================================================
 -->
 <html lang="no">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mission To Mars - skoleprosjekt om NASAs InSight-oppdrag.">
-  <title>Mission To Mars</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mission To Mars - skoleprosjekt om NASAs InSight-oppdrag."
+    />
+    <title>Mission To Mars</title>
 
-  <!--
+    <!--
     FELLES - endres kun etter avtale i gruppen.
     Rekkefølgen er viktig: base først, deretter personfilene.
   -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/christian.css">
-  <link rel="stylesheet" href="css/orjan.css">
-  <link rel="stylesheet" href="css/sebastian.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/christian.css" />
+    <link rel="stylesheet" href="css/orjan.css" />
+    <link rel="stylesheet" href="css/sebastian.css" />
+  </head>
+  <body>
+    <!-- FELLES: lar tastaturbrukere hoppe forbi navbaren. Synlig kun ved tab. -->
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
 
-<!-- FELLES: lar tastaturbrukere hoppe forbi navbaren. Synlig kun ved tab. -->
-<a class="skip-link" href="#innhold">Hopp til innhold</a>
-
-<!-- FELLES: <main> omslutter seksjon 1-6. Lukkes etter Sebastians seksjon 6. -->
-<main id="innhold">
-
-
-<!-- ==========================================================================
+    <!-- FELLES: <main> omslutter seksjon 1-6. Lukkes etter Sebastians seksjon 6. -->
+    <main id="innhold">
+      <!-- ==========================================================================
      ####  CHRISTIAN - START  ####
      branch: christian
      CSS:    css/christian.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 1: HERO ----------
+      <!-- ---------- SEKSJON 1: HERO ----------
        Innhold ifølge designbildet:
          - navbar: logo til venstre, tre lenker til høyre
          - H1 over to linjer, venstrestilt
@@ -67,8 +67,21 @@
        TODO Christian
   -->
 
+      <section class="hero">
+        <div class="container hero__inner">
+          <nav class="nav" aria-label="Hovedmeny">
+            <a class="nav-logo" herf="#">Mission To Mars</a>
 
-  <!-- ---------- SEKSJON 2: SPLIT ----------
+            <ul class="nav-links">
+              <li><a href="insight">The Mission</a></li>
+              <li><a href="insight">Why Mars</a></li>
+              <li><a href="insight">Gallery</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <!-- ---------- SEKSJON 2: SPLIT ----------
        Innhold ifølge designbildet:
          - to kolonner
          - venstre: bildestabel der en grå flate stikker ut bak bildet
@@ -76,16 +89,15 @@
        TODO Christian
   -->
 
-<!-- ####  CHRISTIAN - SLUTT  #### -->
+      <!-- ####  CHRISTIAN - SLUTT  #### -->
 
-
-<!-- ==========================================================================
+      <!-- ==========================================================================
      ####  ØRJAN - START  ####
      branch: orjan
      CSS:    css/orjan.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 3: NASA INSIGHT ----------
+      <!-- ---------- SEKSJON 3: NASA INSIGHT ----------
        Innhold ifølge designbildet:
          - stor versal-overskrift
          - liten label under, i aksentfarge
@@ -94,53 +106,47 @@
        TODO Ørjan
   -->
 
-
-  <!-- ---------- SEKSJON 4: WHY MARS? ----------
+      <!-- ---------- SEKSJON 4: WHY MARS? ----------
        Innhold ifølge designbildet:
          - venstre: H2, to avsnitt, knapp
          - høyre: collage av tre overlappende bilder
        TODO Ørjan
   -->
 
-<!-- ####  ØRJAN - SLUTT  #### -->
+      <!-- ####  ØRJAN - SLUTT  #### -->
 
-
-<!-- ==========================================================================
+      <!-- ==========================================================================
      ####  SEBASTIAN - START  ####
      branch: sebastian
      CSS:    css/sebastian.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 5: KORT ----------
+      <!-- ---------- SEKSJON 5: KORT ----------
        Innhold ifølge designbildet:
          - to kort side ved side
          - hvert kort: bakgrunnsbilde med tittel og tekst sentrert oppå
        TODO Sebastian
   -->
 
-
-  <!-- ---------- SEKSJON 6: BANNER ----------
+      <!-- ---------- SEKSJON 6: BANNER ----------
        Innhold ifølge designbildet:
          - ett bilde i full bredde, uten container
          - bildetekst nede til høyre
        TODO Sebastian
   -->
 
+      <!-- ####  SEBASTIAN - SLUTT  #### -->
 
-<!-- ####  SEBASTIAN - SLUTT  #### -->
+      <!-- FELLES: her lukkes <main>. Footeren hører ikke hjemme inni den. -->
+    </main>
 
-
-<!-- FELLES: her lukkes <main>. Footeren hører ikke hjemme inni den. -->
-</main>
-
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
      ####  SEBASTIAN - FOOTER START  ####
      branch: sebastian
      CSS:    css/sebastian.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 7: FOOTER ----------
+    <!-- ---------- SEKSJON 7: FOOTER ----------
        Bruk <footer> som ytterste element her.
        Innhold ifølge designbildet:
          - copyright til venstre
@@ -151,8 +157,6 @@
        TODO Sebastian
   -->
 
-<!-- ####  SEBASTIAN - FOOTER SLUTT  #### -->
-
-
-</body>
+    <!-- ####  SEBASTIAN - FOOTER SLUTT  #### -->
+  </body>
 </html>
