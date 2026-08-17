@@ -34,6 +34,35 @@
   flex: 1;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-md);
+}
+
+.nav__logo {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav__links a {
+  font-size: var(--fs-small);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  transform: color var(--transition);
+}
+
+.nav__links a:hover,
+.nav__links afocus-visible {
+  color: var(--text);
+}
 /* ==========================================================================
    SEKSJON 2 - SPLIT
    To kolonner. Grå flate som stikker ut bak bildet til venstre.
