@@ -113,6 +113,9 @@
   object-fit: cover;
 }
 
+.split__body {
+  max-width: 46ch;
+}
 /* ==========================================================================
    RESPONSIVT - Christians seksjoner
    Brekkpunkter vi har blitt enige om: 900px (tablet) og 700px (mobil).
