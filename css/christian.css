@@ -22,7 +22,7 @@
   flex-direction: column;
   min-height: 100svh;
 
-  background-image: var(--overlay), url(https://...);
+  background-image: var(--overlay), url(../img/hero-mars.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,21 +56,21 @@
   font-size: var(--fs-small);
   letter-spacing: 0.04em;
   color: var(--text-muted);
-  transform: color var(--transition);
+  transition: color var(--transition);
 }
 
 .nav__links a:hover,
-.nav__links afocus-visible {
+.nav__links a:focus-visible {
   color: var(--text);
 }
 
 .hero__content {
   margin-top: auto;
-  padding-bottom: var(--space-2x1);
+  padding-bottom: var(--space-2xl);
 }
 
 .hero__title {
-  max-width: 14ch;
+  max-width: 16ch;
 }
 
 .hero__text {
@@ -82,6 +82,36 @@
    SEKSJON 2 - SPLIT
    To kolonner. Grå flate som stikker ut bak bildet til venstre.
    ========================================================================== */
+
+.split__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.split__media {
+  position: relative;
+}
+
+.split__media::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--space-lg) * -1);
+  bottom: calc(var(--space-lg) * -1);
+  width: 70%;
+  height: 70%;
+  background: var(--bg-mid);
+  z-index: 0;
+}
+
+.split__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
 
 /* ==========================================================================
    RESPONSIVT - Christians seksjoner
