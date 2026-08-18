@@ -14,6 +14,8 @@
    lettere å avtale fargene én gang enn å rette opp tre ulike nyanser etterpå.
    ============================================================================ */
 
+/* ---------- 1. VARIABLER ----------
+   Alle farger og størrelser hentes herfra, ikke skrives rett inn i reglene.
 /* ---------- 1. VARIABLER ---------- */
 :root {
   /* Farger */
@@ -45,246 +47,29 @@
   /* Typografi */
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  --fs-h1: clamp(2.75rem, 6vw, 5rem);
-  --fs-h2: clamp(1.5rem, 2.6vw, 2.25rem);
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
-  --fs-small: 0.8125rem;
+/* ---------- 2. RESET ----------
+   box-sizing, nullstille marginer, img som block, osv.
+   TODO gruppen
+                                                                             */
 
-  /* Layout */
-  --container: 1200px;
-  --gutter: 24px;
-  --section-y: clamp(72px, 10vw, 140px);
-  --radius: 2px;
-  --radius-pill: 999px;
+/* ---------- 3. LAYOUT-HJELPERE ----------
+   .container  sentrerer innholdet og gir lik luft i sidene
+   .section    lik vertikal luft mellom seksjonene
+   TODO gruppen
+                                                                             */
 
-  /* Avstander. Én skala for alle tre, ellers får seksjonene ulik luft.
-     Trenger du 37px, bruk 32px eller 40px isteden. */
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 40px;
-  --space-xl: 64px;
-  --space-2xl: 96px;
+/* ---------- 4. TYPOGRAFI ----------
+   .h1  .h2  .eyebrow  .caption
+   TODO gruppen
+                                                                             */
 
-  /* Brekkpunkter er avtalt til 900px (tablet) og 700px (mobil).
-     De kan ikke stå som variabler - media queries leser ikke var().
-     Skriv verdiene rett inn i @media i personfilene. */
+/* ---------- 5. KNAPPER OG LENKER ----------
+   .btn         lys knapp
+   .link-arrow  tekstlenke med pil
+   TODO gruppen
+                                                                             */
 
-  --transition: 200ms ease;
-}
-
-/* ---------- 2. RESET ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-  color: inherit;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font);
-  font-size: var(--fs-body);
-  line-height: 1.7;
-  color: var(--text-muted);
-  background: var(--bg-dark);
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ---------- 3. LAYOUT-HJELPERE ---------- */
-.container {
-  width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
-  padding-inline: var(--gutter);
-}
-
-.section {
-  padding-block: var(--section-y);
-}
-
-/* ---------- 4. TYPOGRAFI ---------- */
-.h1 {
-  font-size: var(--fs-h1);
-  line-height: 1.02;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: var(--text);
-}
-
-.h2 {
-  font-size: var(--fs-h2);
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--text);
-}
-
-p + p {
-  margin-top: 1.25em;
-}
-
-.eyebrow {
-  display: block;
-  font-size: var(--fs-small);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.eyebrow--accent {
-  color: var(--accent-text);
-}
-
-.caption {
-  display: inline-block;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-faint);
-}
-
-.caption--right {
-  justify-self: end;
-}
-
-/* ---------- 5. KNAPPER OG LENKER ---------- */
-.btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.75rem;
-  font-size: var(--fs-small);
-  letter-spacing: 0.06em;
-  color: var(--btn-text);
-  background: var(--btn-bg);
-  border-radius: var(--radius);
-  transition:
-    background var(--transition),
-    transform var(--transition);
-}
-
-.btn:hover {
-  background: var(--btn-bg-hover);
-  transform: translateY(-1px);
-}
-
-.link-arrow {
-  display: inline-block;
-  margin-top: 1.75rem;
-  font-size: var(--fs-small);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-text);
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
-}
-
-.link-arrow::after {
-  content: " \2192";
-  transition: margin-left var(--transition);
-}
-
-.link-arrow:hover::after {
-  margin-left: 4px;
-}
-
-/* ---------- 6. TILGJENGELIGHET ---------- */
-
-/* Synlig fokusmarkering for de som navigerer med tab.
-   :focus-visible treffer tastaturbruk, men ikke vanlige museklikk. */
-:where(a, button, input, textarea):focus-visible {
-  outline: 2px solid var(--accent-text);
-  outline-offset: 3px;
-  border-radius: var(--radius);
-}
-
-/* "Hopp til innhold". Ligger utenfor skjermen til den tabbes fram. */
-.skip-link {
-  position: absolute;
-  top: var(--space-sm);
-  left: var(--space-sm);
-  z-index: 100;
-  padding: 12px var(--space-md);
-  color: var(--btn-text);
-  background: var(--btn-bg);
-  border-radius: var(--radius);
-  transform: translateY(-200%);
-}
-
-.skip-link:focus-visible {
-  transform: translateY(0);
-}
-
-/* Skjuler tekst visuelt, men skjermlesere leser den fortsatt.
-   Brukes på de runde ikonene i footeren, som ellers er innholdsløse. */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
-/* Respekter systeminnstillingen for redusert bevegelse. */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* ---------- NOTE TIL GRUPPEN ----------
-   --accent (#c8452f) har ca 4,1:1 kontrast mot --bg-dark. WCAG krever 4,5:1
-   for tekst. Derfor finnes --accent-text (#e2603a, ca 5,6:1), som brukes på
-   .eyebrow--accent og .link-arrow. Bruk --accent på flater og streker,
-   --accent-text når fargen er på bokstaver.
+/* ---------- 6. TILGJENGELIGHET ----------
+   @media (prefers-reduced-motion: reduce)
+   TODO gruppen
                                                                              */
