@@ -14,7 +14,6 @@
    lettere å avtale fargene én gang enn å rette opp tre ulike nyanser etterpå.
    ============================================================================ */
 
-
 /* ---------- 1. VARIABLER ----------
    Alle farger og størrelser hentes herfra, ikke skrives rett inn i reglene.
 
@@ -25,12 +24,10 @@
    TODO gruppen: farger, typografi, layout-mål
                                                                              */
 
-
 /* ---------- 2. RESET ----------
    box-sizing, nullstille marginer, img som block, osv.
    TODO gruppen
                                                                              */
-
 
 /* ---------- 3. LAYOUT-HJELPERE ----------
    .container  sentrerer innholdet og gir lik luft i sidene
@@ -38,19 +35,16 @@
    TODO gruppen
                                                                              */
 
-
 /* ---------- 4. TYPOGRAFI ----------
    .h1  .h2  .eyebrow  .caption
    TODO gruppen
                                                                              */
-
 
 /* ---------- 5. KNAPPER OG LENKER ----------
    .btn         lys knapp
    .link-arrow  tekstlenke med pil
    TODO gruppen
                                                                              */
-
 
 /* ---------- 6. TILGJENGELIGHET ----------
    @media (prefers-reduced-motion: reduce)

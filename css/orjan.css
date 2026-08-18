@@ -11,11 +11,48 @@
    Bruk variablene fra base.css, ikke skriv farger rett inn.
    ============================================================================ */
 
-
 /* ==========================================================================
-   SEKSJON 3 - NASA INSIGHT
+   SEKSJON 3 - MARS ROVERS
    Stor versal-overskrift, videoplayer i full bredde, to tekstspalter under.
    ========================================================================== */
+
+.rover-title {
+}
+
+.rovers {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+#rovers .rover-list {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; TATT VEKK FOR Å LINE DE OPP BEDRE */
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.rover-card {
+  max-width: 30rem;
+  border: 2px solid red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+  text-align: center;
+}
+
+.rover-img {
+  width: 200px;
+}
 
 /* .insight
    TODO                                                                      */
@@ -27,7 +64,6 @@
 
 /* .cols
    TODO                                                                      */
-
 
 /* ==========================================================================
    SEKSJON 4 - WHY MARS?
@@ -41,7 +77,6 @@
    Overlappende bilder kan løses med grid-area på et grid med flere ruter enn
    bilder. z-index bestemmer hvem som ligger øverst.
    TODO                                                                      */
-
 
 /* ==========================================================================
    RESPONSIVT - Ørjans seksjoner
