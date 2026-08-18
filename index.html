@@ -46,13 +46,18 @@
     <link rel="stylesheet" href="css/sebastian.css" />
   </head>
   <body>
-    <!-- ==========================================================================
+    <!-- FELLES: lar tastaturbrukere hoppe forbi navbaren. Synlig kun ved tab. -->
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <!-- FELLES: <main> omslutter seksjon 1-6. Lukkes etter Sebastians seksjon 6. -->
+    <main id="innhold">
+      <!-- ==========================================================================
      ####  CHRISTIAN - START  ####
      branch: christian
      CSS:    css/christian.css
      ========================================================================== -->
 
-    <!-- ---------- SEKSJON 1: HERO ----------
+      <!-- ---------- SEKSJON 1: HERO ----------
        Innhold ifølge designbildet:
          - navbar: logo til venstre, tre lenker til høyre
          - H1 over to linjer, venstrestilt
@@ -61,24 +66,73 @@
          - bakgrunnsbilde i full bredde med mørk gradient over
        TODO Christian
   -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <nav class="nav" aria-label="Hovedmeny">
+            <a class="nav__logo" href="#">Mission To Mars</a>
 
-    <!-- ---------- SEKSJON 2: SPLIT ----------
+            <ul class="nav__links">
+              <li><a href="#insight">The Mission</a></li>
+              <li><a href="#why-mars">Why Mars</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </nav>
+
+          <div class="hero__content">
+            <h1 class="h1 hero__title">Journey to the<br />red planet</h1>
+            <p class="hero__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+              magnam numquam expedita, accusamus laborum rerum facilis
+            </p>
+            <a class="link-arrow" href="#insight">Se oppdraget</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- SEKSJON 2: SPLIT ----------
        Innhold ifølge designbildet:
          - to kolonner
          - venstre: bildestabel der en grå flate stikker ut bak bildet
          - høyre: liten label, H2, to avsnitt, knapp
        TODO Christian
   -->
+      <section class="section split" id="insight">
+        <div class="container split__grid">
+          <div class="split__media">
+            <img
+              class="split__img"
+              src="img/insight-lander.jpg"
+              alt="InSight-landeren fotografert på overflaten av Mars"
+              width="1200"
+              height="800"
+            />
+          </div>
+          <div class="split__body">
+            <span class="eyebrow">Om oppdraget</span>
+            <h2 class="h2">Et laboratorium på en annen planet</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+              officiis iste voluptatum obcaecati! Totam ea placeat nam quaerat,
+              adipisci beatae voluptatibus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+              officiis iste voluptatum obcaecati!
+            </p>
+            <a class="btn" href="#why-mars">Les mer</a>
+          </div>
+        </div>
+      </section>
 
-    <!-- ####  CHRISTIAN - SLUTT  #### -->
+      <!-- ####  CHRISTIAN - SLUTT  #### -->
 
-    <!-- ==========================================================================
+      <!-- ==========================================================================
      ####  ØRJAN - START  ####
      branch: orjan
      CSS:    css/orjan.css
      ========================================================================== -->
 
-    <!-- ---------- SEKSJON 3: MARS ROVER ----------
+      <!-- ---------- SEKSJON 3: NASA INSIGHT ----------
        Innhold ifølge designbildet:
 
 
@@ -88,119 +142,131 @@
          - to tekstspalter under videoen
        TODO Ørjan
   -->
+      <section class="rovers" id="rovers">
+        <h2 class="rover-title">MARS ROVER</h2>
+        <p>
+          As of May 2021, there have been six successful robotically operated
+          Mars rovers
+        </p>
 
-    <section class="rovers" id="rovers">
-      <h2 class="rover-title">MARS ROVER</h2>
-      <p>
-        As of May 2021, there have been six successful robotically operated Mars
-        rovers
-      </p>
+        <ul class="rover-list">
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Soujurner</h3>
+              <img
+                class="rover-img"
+                src="img/Sojourner.jpg"
+                alt="Soujurner Mars Rover"
+              />
+              <p>
+                Soujurner was the first to land on Mars as part of the Mars
+                Pathfinder project. It landed on July 4th 1997, and lasted for
+                about 100 meters, before it lost communications with earth. Its
+                last signal was recieved the morning of October 7, 1997
+              </p>
+            </div>
+          </li>
 
-      <ul class="rover-list">
-        <li>
-          <div class="rover-card">
-            <h3 class="bottomLine">Soujurner</h3>
-            <img
-              class="rover-img"
-              src="img/Sojourner.jpg"
-              alt="Soujurner Mars Rover"
-            />
-            <p>
-              Soujurner was the first to land on Mars as part of the Mars
-              Pathfinder project. It landed on July 4th 1997, and lasted for
-              about 100 meters, before it lost communications with earth. Its
-              last signal was recieved the morning of October 7, 1997
-            </p>
-          </div>
-        </li>
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Spirit</h3>
+              <img
+                class="rover-img"
+                src="img/Spirit.jpg"
+                alt="Spirit Mars rover"
+              />
+              <p>
+                Spirit landed on January, 4 2004, three weeks before its twin
+                Opportunity. Spirit got stuck in a "sand trap" in late 2009 at
+                an angle that hampered recharging of its batteries; its last
+                communication with Earth was on March 22, 2010.
+              </p>
+            </div>
+          </li>
 
-        <li>
-          <div class="rover-card">
-            <h3 class="bottomLine">Spirit</h3>
-            <img
-              class="rover-img"
-              src="img/Spirit.jpg"
-              alt="Spirit Mars rover"
-            />
-            <p>
-              Spirit landed on January, 4 2004, three weeks before its twin
-              Opportunity. Spirit got stuck in a "sand trap" in late 2009 at an
-              angle that hampered recharging of its batteries; its last
-              communication with Earth was on March 22, 2010.
-            </p>
-          </div>
-        </li>
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Opportunity(Oppy)</h3>
+              <img
+                class="rover-img"
+                src="img/Oppy.jpg"
+                alt="Opportunity Mars rover"
+              />
+              <p>
+                Opportunity landed on Mars January 25, 2004. It's planned
+                duration was 90 sols(Mars days), but lasted for 5,352 sols.
+                Which is about 15 Earth years. It traveled a total distance of
+                45 kilometers.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="crewCard">
+              <h3 class="bottomLine">Ryland Grace</h3>
+              <img src="img/Ryland Grace crop square.JPG" alt="Ryland Grace" />
+              <p>
+                Ryland is a former molecular biologist, now science teacher. He
+                is the new designated science specialist after Martin DuBois
+                died prior to take off.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="crewCard">
+              <h3 class="bottomLine">Ryland Grace</h3>
+              <img src="img/Ryland Grace crop square.JPG" alt="Ryland Grace" />
+              <p>
+                Ryland is a former molecular biologist, now science teacher. He
+                is the new designated science specialist after Martin DuBois
+                died prior to take off.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-        <li>
-          <div class="rover-card">
-            <h3 class="bottomLine">Opportunity(Oppy)</h3>
-            <img
-              class="rover-img"
-              src="img/Oppy.jpg"
-              alt="Opportunity Mars rover"
-            />
-            <p>
-              Opportunity landed on Mars January 25, 2004. It's planned duration
-              was 90 sols(Mars days), but lasted for 5,352 sols. Which is about
-              15 Earth years. It traveled a total distance of 45 kilometers.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="crewCard">
-            <h3 class="bottomLine">Ryland Grace</h3>
-            <img src="img/Ryland Grace crop square.JPG" alt="Ryland Grace" />
-            <p>
-              Ryland is a former molecular biologist, now science teacher. He is
-              the new designated science specialist after Martin DuBois died
-              prior to take off.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="crewCard">
-            <h3 class="bottomLine">Ryland Grace</h3>
-            <img src="img/Ryland Grace crop square.JPG" alt="Ryland Grace" />
-            <p>
-              Ryland is a former molecular biologist, now science teacher. He is
-              the new designated science specialist after Martin DuBois died
-              prior to take off.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ---------- SEKSJON 4: WHY MARS? ----------
+      <!-- ---------- SEKSJON 4: WHY MARS? ----------
        Innhold ifølge designbildet:
          - venstre: H2, to avsnitt, knapp
          - høyre: collage av tre overlappende bilder
        TODO Ørjan
   -->
 
-    <!-- ####  ØRJAN - SLUTT  #### -->
+      <!-- ####  ØRJAN - SLUTT  #### -->
 
-    <!-- ==========================================================================
+      <!-- ==========================================================================
      ####  SEBASTIAN - START  ####
      branch: sebastian
      CSS:    css/sebastian.css
      ========================================================================== -->
 
-    <!-- ---------- SEKSJON 5: KORT ----------
+      <!-- ---------- SEKSJON 5: KORT ----------
        Innhold ifølge designbildet:
          - to kort side ved side
          - hvert kort: bakgrunnsbilde med tittel og tekst sentrert oppå
        TODO Sebastian
   -->
 
-    <!-- ---------- SEKSJON 6: BANNER ----------
+      <!-- ---------- SEKSJON 6: BANNER ----------
        Innhold ifølge designbildet:
          - ett bilde i full bredde, uten container
          - bildetekst nede til høyre
        TODO Sebastian
   -->
 
+      <!-- ####  SEBASTIAN - SLUTT  #### -->
+
+      <!-- FELLES: her lukkes <main>. Footeren hører ikke hjemme inni den. -->
+    </main>
+
+    <!-- ==========================================================================
+     ####  SEBASTIAN - FOOTER START  ####
+     branch: sebastian
+     CSS:    css/sebastian.css
+     ========================================================================== -->
+
     <!-- ---------- SEKSJON 7: FOOTER ----------
+       Bruk <footer> som ytterste element her.
        Innhold ifølge designbildet:
          - copyright til venstre
          - logo midtstilt
@@ -210,6 +276,6 @@
        TODO Sebastian
   -->
 
-    <!-- ####  SEBASTIAN - SLUTT  #### -->
+    <!-- ####  SEBASTIAN - FOOTER SLUTT  #### -->
   </body>
 </html>

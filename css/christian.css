@@ -11,41 +11,119 @@
    Bruk variablene fra base.css, ikke skriv farger rett inn.
    ============================================================================ */
 
-
 /* ==========================================================================
    SEKSJON 1 - HERO
    Bakgrunnsbilde i full bredde, innhold i venstre halvdel.
    Husk et lag mellom bilde og tekst, ellers blir teksten uleselig.
    ========================================================================== */
 
-/* .hero
-   TODO                                                                      */
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 70svh;
 
-/* .hero__bg
-   TODO                                                                      */
+  background-image: var(--overlay), url(../img/hero-mars.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 
-/* .nav  .nav__logo  .nav__links
-   TODO                                                                      */
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
 
-/* .hero__content  .hero__title  .hero__text
-   TODO                                                                      */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-md);
+}
 
+.nav__logo {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav__links a {
+  font-size: var(--fs-small);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.nav__links a:hover,
+.nav__links a:focus-visible {
+  color: var(--text);
+}
+
+.hero__content {
+  margin-top: auto;
+  padding-bottom: var(--space-2xl);
+}
+
+.hero__title {
+  max-width: 16ch;
+  margin-top: var(--space-2xl);
+}
+
+.hero__text {
+  max-width: 46ch;
+  margin-top: var(--space-md);
+}
 
 /* ==========================================================================
    SEKSJON 2 - SPLIT
    To kolonner. Grå flate som stikker ut bak bildet til venstre.
    ========================================================================== */
 
-/* .split  .split__grid
-   TODO                                                                      */
+.split {
+  padding-block: var(--space-2xl);
+  padding-inline: var(--space-lg);
+  background-color: var(--bg-dark);
+}
 
-/* .split__media  .split__frame  .split__img
-   TODO                                                                      */
+.split__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
 
-/* .split__body
-   TODO                                                                      */
+.split__media {
+  position: relative;
+}
 
+.split__media::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--space-lg) * -1);
+  bottom: calc(var(--space-lg) * -1);
+  width: 100%;
+  height: 100%;
+  background: var(--bg-mid);
+  z-index: 0;
+}
 
+.split__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.split__body {
+  max-width: 46ch;
+}
 /* ==========================================================================
    RESPONSIVT - Christians seksjoner
    Brekkpunkter vi har blitt enige om: 900px (tablet) og 700px (mobil).
