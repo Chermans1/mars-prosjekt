@@ -16,14 +16,37 @@
 
 /* ---------- 1. VARIABLER ----------
    Alle farger og størrelser hentes herfra, ikke skrives rett inn i reglene.
+/* ---------- 1. VARIABLER ---------- */
+:root {
+  /* Farger */
+  --bg-dark: #0b0b0c; /* mørkeste bånd (hero, insight, footer) */
+  --bg-mid: #1b1b1d; /* lysere seksjonsbånd */
+  --bg-card: #232326; /* kort og rammer */
+  --text: #f2f2f3; /* overskrifter */
+  --text-muted: #9a9a9f; /* brødtekst */
+  --text-faint: #8a8a92; /* bildetekster, minst mulig brukt */
+  --accent: #c8452f; /* rustrød, til flater og store elementer */
+  --accent-text: #e2603a; /* lysere variant, til tekst - se note nederst */
+  --line: #2e2e32;
 
-   :root {
-     --bg-dark: ...
-   }
+  /* Knapp */
+  --btn-bg: #e8ecf4;
+  --btn-bg-hover: #ffffff;
+  --btn-text: #111111;
 
-   TODO gruppen: farger, typografi, layout-mål
-                                                                             */
+  /* Overlegg over bakgrunnsbilder.
+     Uten dette forsvinner teksten i hero. Legges som background-image
+     foran selve fotoet. */
+  --overlay: linear-gradient(
+    90deg,
+    rgba(11, 11, 12, 0.94) 0%,
+    rgba(11, 11, 12, 0.72) 45%,
+    rgba(11, 11, 12, 0.25) 100%
+  );
 
+  /* Typografi */
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 /* ---------- 2. RESET ----------
    box-sizing, nullstille marginer, img som block, osv.
    TODO gruppen
@@ -49,4 +72,3 @@
 /* ---------- 6. TILGJENGELIGHET ----------
    @media (prefers-reduced-motion: reduce)
    TODO gruppen
-                                                                             */
