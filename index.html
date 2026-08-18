@@ -16,8 +16,12 @@
 
   REGEL
     Jobb kun innenfor DIN egen START/SLUTT-blokk under.
-    Skal du endre <head>, base.css eller en annen sin blokk:
-    ta det opp i gruppen først.
+    Skal du endre <head>, base.css, <main>/<footer>-taggene eller en
+    annen sin blokk: ta det opp i gruppen først.
+
+  MERK
+    Seksjon 1-6 ligger inne i <main>. Footeren ligger utenfor, fordi den
+    ikke er en del av hovedinnholdet. Sebastian har derfor to blokker.
 
   Se docs/arbeidsflyt.md for git-rutinene.
   ============================================================================
@@ -201,6 +205,8 @@
          - copyright til venstre
          - logo midtstilt
          - fire runde sosiale ikoner til høyre
+       Ikonene trenger lesbar tekst for skjermlesere. Legg teksten i en
+       <span class="visually-hidden"> inni hver lenke, f.eks. "Instagram".
        TODO Sebastian
   -->
 
