@@ -20,11 +20,11 @@
 .hero {
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
+  min-height: 70svh;
 
   background-image: var(--overlay), url(../img/hero-mars.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
 }
 
 .nav {
@@ -71,6 +72,7 @@
 
 .hero__title {
   max-width: 16ch;
+  margin-top: var(--space-2xl);
 }
 
 .hero__text {
@@ -82,6 +84,12 @@
    SEKSJON 2 - SPLIT
    To kolonner. Grå flate som stikker ut bak bildet til venstre.
    ========================================================================== */
+
+.split {
+  padding-block: var(--space-2xl);
+  padding-inline: var(--space-lg);
+  background-color: var(--bg-dark);
+}
 
 .split__grid {
   display: grid;
@@ -99,8 +107,8 @@
   position: absolute;
   left: calc(var(--space-lg) * -1);
   bottom: calc(var(--space-lg) * -1);
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   background: var(--bg-mid);
   z-index: 0;
 }
