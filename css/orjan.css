@@ -16,7 +16,12 @@
    Stor versal-overskrift, videoplayer i full bredde, to tekstspalter under.
    ========================================================================== */
 
-.rover-title {
+/* .rover-title {
+
+} */
+
+#rovers {
+  width: 100%;
 }
 
 .rovers {
@@ -25,35 +30,55 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.6rem;
+  gap: 1rem;
 }
 
 #rovers .rover-list {
   display: flex;
-  justify-content: center;
-  /* align-items: center; TATT VEKK FOR Å LINE DE OPP BEDRE */
   flex-wrap: wrap;
-  gap: 1.6rem;
+  justify-content: center;
+  gap: 1rem;
   list-style-type: none;
   padding: 0;
+  width: 100%;
+  max-width: 64rem;
+}
+
+#rovers .rover-list li {
+  flex: 0 0 20rem;
 }
 
 .rover-card {
-  max-width: 30rem;
-  border: 2px solid red;
+  width: 20rem;
+  height: 32rem;
+  border: 2px solid var(--accent);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1rem;
   text-align: center;
+  background-color: var(--bg-card);
+  color: var(--text);
 }
 
 .rover-img {
-  width: 200px;
+  width: 250px;
+  height: 250px;
+  object-fit: scale-down;
 }
 
+.rover-text {
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* width:; */
+}
 /* .insight
    TODO                                                                      */
 
