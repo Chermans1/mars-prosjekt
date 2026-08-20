@@ -1,88 +1,109 @@
 # Mission To Mars
 
-Skoleprosjekt. En landingsside om NASAs InSight-oppdrag, bygget etter et utlevert designbilde.
+Skoleprosjekt i HTML og CSS. En landingsside om Mars, bygget etter et utlevert designbilde.
 
-Ren HTML og CSS. Ingen rammeverk, ingen byggesteg.
+**Live:** https://chermans1.github.io/mars-prosjekt/
 
-**Status:** stillas. Filene finnes, men koden er ikke skrevet ennå.
+Ren HTML og CSS. Ingen rammeverk, ingen byggesteg, ingen avhengigheter.
 
-## Gruppe og brancher
+---
 
-| Person | Branch | Seksjoner | CSS-fil |
-|---|---|---|---|
-| Christian | `christian` | 1. Hero + navbar<br>2. Split | `css/christian.css` |
-| Ørjan | `orjan` | 3. NASA Insight<br>4. Why Mars? | `css/orjan.css` |
-| Sebastian | `sebastian` | 5. Kort<br>6. Banner<br>7. Footer | `css/sebastian.css` |
+## Om oppgaven
 
-Felles: `index.html` og `css/base.css`. Endringer der avtales i gruppen først.
+One-page nettside med en planet som tema. Kravet var minimum to seksjoner og en navbar som scroller til dem, med vekt på design, layout, fargevalg, bilder og fonter.
 
-## Kom i gang
+Siden er bevisst ikke responsiv. Oppgaveteksten sier den ikke trenger å optimaliseres for mobil, og gruppen valgte å bruke tiden på layout og innhold i stedet.
 
-```bash
-git clone https://github.com/BRUKERNAVN/mars-prosjekt.git
-cd mars-prosjekt
-git checkout -b DITT-NAVN
-```
+---
 
-Åpne `index.html` i nettleseren. Bruker du VS Code, anbefales **Live Server** - da oppdateres siden automatisk når du lagrer.
+## Hva som er bygget
 
-Se `docs/arbeidsflyt.md` for git-rutinene.
+| #   | Seksjon                 | Status      | Ansvarlig |
+| --- | ----------------------- | ----------- | --------- |
+| 1   | Hero med navbar         | Ferdig      | Christian |
+| 2   | Split, InSight-landeren | Ferdig      | Christian |
+| 3   | Mars Rovers             | Ferdig      | Ørjan     |
+| 4   | Why Mars?               | Ikke bygget | Ørjan     |
+| 5   | Kort                    | Ikke bygget | Sebastian |
+| 6   | Banner                  | Ikke bygget | Sebastian |
+| 7   | Footer                  | Ikke bygget | Sebastian |
 
-## Mappestruktur
+Tre seksjoner er ferdigstilt. Kravet om minimum to er dermed oppfylt.
+
+---
+
+## Teknisk
+
+**Layout** er bygget med flexbox og grid. `position: absolute` er bevisst unngått.
+
+**Fargene og typografien** ligger som CSS-variabler i `css/base.css` og brukes gjennom hele siden. Ingen farger er skrevet rett inn i reglene.
+
+**Tilgjengelighet:**
+
+- Skip-link som lar tastaturbrukere hoppe forbi navbaren
+- Synlig fokusmarkering via `:focus-visible`
+- `.visually-hidden` for tekst som skjermlesere skal lese, men som ikke vises
+- `prefers-reduced-motion` respekteres
+- Aksentfargen finnes i to varianter: `--accent` til flater og `--accent-text` til bokstaver, siden den mørkeste varianten ikke når WCAG-kravet på 4,5:1 mot bakgrunnen
+
+**Bildene** er komprimert før de ble lagt inn.
+
+---
+
+## Struktur
 
 ```
 mars-prosjekt/
-├── index.html          Tomme seksjoner merket med eier
+├── index.html          Alle seksjoner, merket med eier
 ├── css/
-│   ├── base.css        Variabler, reset, typografi (felles)
+│   ├── base.css        Variabler, reset, typografi, tilgjengelighet (felles)
 │   ├── christian.css   Seksjon 1-2
 │   ├── orjan.css       Seksjon 3-4
 │   └── sebastian.css   Seksjon 5-7
-├── img/                Bilder (tom foreløpig)
+├── img/                Bilder
 ├── docs/
 │   └── arbeidsflyt.md  Git-rutiner
-├── .github/
-│   └── pull_request_template.md
-├── .gitignore
 └── README.md
 ```
 
-Rekkefølgen på `<link>`-taggene i `index.html` er bevisst: `base.css` først, deretter personfilene. Bytter du om, kan felles stiler overstyre de individuelle.
+Rekkefølgen på `<link>`-taggene i `index.html` er bevisst: `base.css` først, deretter personfilene. Bytter du om, overstyrer felles stiler de individuelle.
 
-## Rekkefølge på arbeidet
+---
 
-**Steg 1 - felles, før noen begynner å style**
+## Gruppe og brancher
 
-Bli enige om variablene i `base.css`: farger, fonter, brekkpunkter og avstander. Gjør dette sammen på én branch og merge den inn. Det er mye lettere å avtale én gang enn å rette opp tre ulike nyanser etterpå.
+| Person    | Branch      | CSS-fil             |
+| --------- | ----------- | ------------------- |
+| Christian | `christian` | `css/christian.css` |
+| Ørjan     | `Orjan`     | `css/orjan.css`     |
+| Sebastian | `sebzalo`   | `css/sebastian.css` |
 
-**Steg 2 - hver for seg**
+`index.html` og `css/base.css` er felles. Endringer der avtales i gruppen først.
 
-Nå kan alle jobbe parallelt på hver sin branch uten å komme i veien for hverandre.
+`main` er beskyttet. Alt går via pull request.
 
-**Steg 3 - felles igjen**
+---
 
-Bilder, tekst, testing, tilgjengelighet.
+## Kjøre lokalt
 
-## Bilder
+```bash
+git clone https://github.com/Chermans1/mars-prosjekt.git
+cd mars-prosjekt
+```
 
-`img/` er tom. Legg inn ekte bilder her og komprimer dem før dere pusher - ingenting over 500 KB.
+Åpne `index.html` i nettleseren. Bruker du VS Code, anbefales **Live Server**, da oppdateres siden automatisk når du lagrer.
 
-Gode kilder til frie NASA-bilder:
+Se `docs/arbeidsflyt.md` for git-rutinene.
 
-- [images.nasa.gov](https://images.nasa.gov)
-- [mars.nasa.gov/insight](https://mars.nasa.gov/insight/)
+---
 
-## Font
+## Erfaringer fra samarbeidet
 
-Ikke valgt ennå. Originalen ser ut til å bruke en tung geometrisk sans. Space Grotesk eller Archivo fra Google Fonts ligger nært. Legges inn i `<head>` og settes som `--font` i `base.css`.
+Tre ganger i prosjektet oppsto samme type feil: fellesfiler ble endret fra utdaterte lokale kopier, eller delte klasser ble overstyrt i en personlig CSS-fil. Én gang forsvant alt innholdet i `base.css` fordi det ble committet over fra en gammel versjon.
 
-## Å gjøre
+Lærdommen vi tar med videre:
 
-- [ ] Bli enige om variabler i `base.css`
-- [ ] Velge og legge inn font
-- [ ] Bygge seksjon 1-2 (Christian)
-- [ ] Bygge seksjon 3-4 (Ørjan)
-- [ ] Bygge seksjon 5-7 (Sebastian)
-- [ ] Legge inn bilder
-- [ ] Skrive ferdig innholdstekst
-- [ ] Sjekke kontrast og tastaturnavigasjon
+- Én person eier fellesfila
+- Delte klasser som `.container` og `.section` endres ikke i personlige CSS-filer. Trenger du noe annet, lag en ny klasse
+- Alle puller fra `main` før de begynner å jobbe
+- Automatisk formatering skrus av, ellers skriver editoren om hele filer og lager konflikter der ingen har endret noe
