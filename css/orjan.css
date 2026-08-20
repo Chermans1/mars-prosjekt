@@ -25,12 +25,14 @@
 }
 
 .rovers {
-  min-height: 100dvh;
+  /* min-height og justify-content fjernet: kortene er høyere enn 100dvh,
+     og sentrering fikk innholdet til å flyte ut over footeren. */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
+  /* Felles seksjonsluft fra base.css, så rytmen matcher resten av siden. */
+  padding-block: var(--section-y);
 }
 
 #rovers .rover-list {
