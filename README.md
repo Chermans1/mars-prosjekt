@@ -26,9 +26,9 @@ Siden er bevisst ikke responsiv. Oppgaveteksten sier den ikke trenger å optimal
 | 4   | Why Mars?               | Ikke bygget | Ørjan     |
 | 5   | Kort                    | Ikke bygget | Sebastian |
 | 6   | Banner                  | Ikke bygget | Sebastian |
-| 7   | Footer                  | Ikke bygget | Sebastian |
+| 7   | Footer                  | Ferdig.     | CH og Seb |
 
-Tre seksjoner er ferdigstilt. Kravet om minimum to er dermed oppfylt.
+Fire seksjoner er ferdigstilt. Kravet om minimum to er dermed oppfylt.
 
 ---
 
