@@ -12,51 +12,98 @@
    Bruk variablene fra base.css, ikke skriv farger rett inn.
    ============================================================================ */
 
-
 /* ==========================================================================
    SEKSJON 5 - TO KORT MED TEKST OVER BILDE
    ========================================================================== */
-
-/* .cards  .cards__grid
-   TODO                                                                      */
-
-/* .card  .card__img
-   Bildet ligger bak teksten. Du trenger et mørkt lag mellom dem for at
-   teksten skal være lesbar.
-   TODO                                                                      */
-
-/* .card__body  .card__title
-   TODO                                                                      */
-
+*/
 
 /* ==========================================================================
    SEKSJON 6 - FULLBREDDE BANNER
    Bildet går helt ut til kanten, uten .container rundt.
-   ========================================================================== */
-
-/* .banner  .banner__img  .caption--overlay
-   TODO                                                                      */
-
+   ========================================================================== */                                                                    */
 
 /* ==========================================================================
    SEKSJON 7 - FOOTER
    Tre kolonner: copyright venstre, logo midtstilt, ikoner høyre.
    ========================================================================== */
 
-/* .footer  .footer__grid
-   TODO                                                                      */
-
-/* .footer__copy  .footer__logo  .footer__social
-   TODO                                                                      */
-
-
 /* ==========================================================================
-   RESPONSIVT - Sebastians seksjoner
-   Brekkpunkter vi har blitt enige om: 900px (tablet) og 700px (mobil).
+   SEKSJON 7 - FOOTER
+   Copyright til venstre, logo midtstilt, fire runde ikoner til høyre.
    ========================================================================== */
 
-/* @media (max-width: 900px)
-   TODO                                                                      */
+.footer {
+  background: var(--bg-dark);
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-lg);
+}
 
-/* @media (max-width: 700px)
-   TODO                                                                      */
+/* .container gir bredde og sidemarg. Her legges bare flex-oppsettet på. */
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+/* Like flex-verdier på ytterkolonnene holder logoen i faktisk midten,
+   selv om copyright og ikoner har ulik bredde. */
+.footer__copy {
+  flex: 1;
+  font-size: var(--fs-small);
+  color: var(--text-faint);
+}
+
+.footer__logo {
+  font-size: var(--fs-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.footer__social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+}
+
+.footer__icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  transition: border-color var(--transition);
+}
+
+.footer__icon::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: var(--text-muted);
+  transition: background var(--transition);
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+}
+
+.footer__icon:hover {
+  border-color: var(--accent-text);
+}
+.footer__icon:hover::before {
+  background: var(--accent-text);
+}
+
+.footer__icon--ig {
+  --icon: url("../img/instagram.svg");
+}
+.footer__icon--fb {
+  --icon: url("../img/facebook.svg");
+}
+.footer__icon--yt {
+  --icon: url("../img/youtube.svg");
+}
+.footer__icon--li {
+  --icon: url("../img/linkedin.svg");
+}
