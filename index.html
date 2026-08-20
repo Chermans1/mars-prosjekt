@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
   ============================================================================
   MISSION TO MARS - gruppeoppgave
@@ -7,8 +7,8 @@
     CHRISTIAN   Seksjon 1 (Hero + navbar)      branch: christian
                 Seksjon 2 (Split)              CSS: css/christian.css
 
-    ØRJAN       Seksjon 3 (NASA Insight)       branch: orjan
-                Seksjon 4 (Why Mars?)          CSS: css/orjan.css
+    ØRJAN       Seksjon 3 (MARS ROVER)       branch: orjan
+                                             CSS: css/orjan.css
 
     SEBASTIAN   Seksjon 5 (Kort)               branch: sebastian
                 Seksjon 6 (Banner)             CSS: css/sebastian.css
@@ -27,37 +27,37 @@
   ============================================================================
 -->
 <html lang="no">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mission To Mars - skoleprosjekt om NASAs InSight-oppdrag.">
-  <title>Mission To Mars</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mission To Mars - skoleprosjekt om NASAs InSight-oppdrag."
+    />
+    <title>Mission To Mars</title>
 
-  <!--
+    <!--
     FELLES - endres kun etter avtale i gruppen.
     Rekkefølgen er viktig: base først, deretter personfilene.
   -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/christian.css">
-  <link rel="stylesheet" href="css/orjan.css">
-  <link rel="stylesheet" href="css/sebastian.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/christian.css" />
+    <link rel="stylesheet" href="css/orjan.css" />
+    <link rel="stylesheet" href="css/sebastian.css" />
+  </head>
+  <body>
+    <!-- FELLES: lar tastaturbrukere hoppe forbi navbaren. Synlig kun ved tab. -->
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
 
-<!-- FELLES: lar tastaturbrukere hoppe forbi navbaren. Synlig kun ved tab. -->
-<a class="skip-link" href="#innhold">Hopp til innhold</a>
-
-<!-- FELLES: <main> omslutter seksjon 1-6. Lukkes etter Sebastians seksjon 6. -->
-<main id="innhold">
-
-
-<!-- ==========================================================================
+    <!-- FELLES: <main> omslutter seksjon 1-6. Lukkes etter Sebastians seksjon 6. -->
+    <main id="innhold">
+      <!-- ==========================================================================
      ####  CHRISTIAN - START  ####
      branch: christian
      CSS:    css/christian.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 1: HERO ----------
+      <!-- ---------- SEKSJON 1: HERO ----------
        Innhold ifølge designbildet:
          - navbar: logo til venstre, tre lenker til høyre
          - H1 over to linjer, venstrestilt
@@ -66,81 +66,232 @@
          - bakgrunnsbilde i full bredde med mørk gradient over
        TODO Christian
   -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <nav class="nav" aria-label="Hovedmeny">
+            <a class="nav__logo" href="#">Mission To Mars</a>
 
+            <ul class="nav__links">
+              <li><a href="#insight">The Mission</a></li>
+              <li><a href="#why-mars">Why Mars</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </nav>
 
-  <!-- ---------- SEKSJON 2: SPLIT ----------
+          <div class="hero__content">
+            <h1 class="h1 hero__title">Journey to the<br />red planet</h1>
+            <p class="hero__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+              magnam numquam expedita, accusamus laborum rerum facilis
+            </p>
+            <a class="link-arrow" href="#insight">Se oppdraget</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- SEKSJON 2: SPLIT ----------
        Innhold ifølge designbildet:
          - to kolonner
          - venstre: bildestabel der en grå flate stikker ut bak bildet
          - høyre: liten label, H2, to avsnitt, knapp
        TODO Christian
   -->
+      <section class="section split" id="insight">
+        <div class="container split__grid">
+          <div class="split__media">
+            <img
+              class="split__img"
+              src="img/insight-lander.jpg"
+              alt="InSight-landeren fotografert på overflaten av Mars"
+              width="1200"
+              height="800"
+            />
+          </div>
+          <div class="split__body">
+            <span class="eyebrow">Om oppdraget</span>
+            <h2 class="h2">Et laboratorium på en annen planet</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+              officiis iste voluptatum obcaecati! Totam ea placeat nam quaerat,
+              adipisci beatae voluptatibus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+              officiis iste voluptatum obcaecati!
+            </p>
+            <a class="btn" href="#why-mars">Les mer</a>
+          </div>
+        </div>
+      </section>
 
-<!-- ####  CHRISTIAN - SLUTT  #### -->
+      <!-- ####  CHRISTIAN - SLUTT  #### -->
 
-
-<!-- ==========================================================================
+      <!-- ==========================================================================
      ####  ØRJAN - START  ####
      branch: orjan
      CSS:    css/orjan.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 3: NASA INSIGHT ----------
+      <!-- ---------- SEKSJON 3: NASA INSIGHT ----------
        Innhold ifølge designbildet:
+
+
          - stor versal-overskrift
          - liten label under, i aksentfarge
          - videoplayer i full bredde med rund play-knapp midt på
          - to tekstspalter under videoen
        TODO Ørjan
   -->
+      <section class="rovers" id="rovers">
+        <h2 class="rover-title">MARS ROVER</h2>
+        <p>
+          As of May 2021, there have been six successful robotically operated
+          Mars rovers
+        </p>
 
+        <ul class="rover-list">
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Soujurner</h3>
+              <img
+                class="rover-img"
+                src="img/Sojourner.jpg"
+                alt="Soujurner Mars Rover"
+              />
+              <p class="rover-text">
+                Soujurner was the first to land on Mars as part of the Mars
+                Pathfinder project. It landed on July 4th 1997, and lasted for
+                about 100 meters, before it lost communications with earth. Its
+                last signal was recieved the morning of October 7, 1997
+              </p>
+            </div>
+          </li>
 
-  <!-- ---------- SEKSJON 4: WHY MARS? ----------
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Spirit</h3>
+              <img
+                class="rover-img"
+                src="img/Spirit.jpg"
+                alt="Spirit Mars rover"
+              />
+              <p class="rover-text">
+                Spirit landed on January, 4 2004, three weeks before its twin
+                Opportunity. Spirit got stuck in a "sand trap" in late 2009 at
+                an angle that hampered recharging of its batteries; its last
+                communication with Earth was on March 22, 2010.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Opportunity(Oppy)</h3>
+              <img
+                class="rover-img"
+                src="img/Oppy.jpg"
+                alt="Opportunity Mars rover"
+              />
+              <p class="rover-text">
+                Opportunity landed on Mars January 25, 2004. It's planned
+                duration was 90 sols(Mars days), but lasted for 5,352 sols.
+                Which is about 15 Earth years. It traveled a total distance of
+                45 kilometers.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Curiosity</h3>
+              <img
+                class="rover-img curiosity-img"
+                src="img/Curiosity.jpg"
+                alt="Curiosity Mars rover"
+              />
+              <p class="rover-text">
+                Curiosity was launched in 2011 and landed the following year. It
+                is currently exploring the Gale crater and Mount Sharp as part
+                of NASA's Mars Science Laboratory(MSL) mission.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Perseverance</h3>
+              <img
+                class="rover-img rover-move"
+                src="img/Perseverance.gif"
+                alt="Perseverance Mars rover"
+              />
+              <p class="rover-text">
+                Perseverance has been exploring Mars since February 18, 2021, as
+                part of the Mars 2020 mission. The car-sized rover was launched
+                on July 30, 2020 from Cape Canaveral aboard an Atlas V rocket
+                and landed in Jezero Crater, a site chosen for its ancient river
+                delta that may preserve evidence of past microbial life.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="rover-card">
+              <h3 class="bottomLine">Zhurong</h3>
+              <img
+                class="rover-img"
+                src="img/Zhurong.png"
+                alt="Zhurong Mars rover"
+              />
+              <p class="rover-text">
+                Zhurong is a Chinese rover, the country's first to land on
+                another planet after it previously landed two rovers on the
+                Moon. The rover is part of the Tianwen-1 mission to Mars
+                conducted by the China National Space Administration (CNSA).
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- ---------- SEKSJON 4: WHY MARS? ----------
        Innhold ifølge designbildet:
          - venstre: H2, to avsnitt, knapp
          - høyre: collage av tre overlappende bilder
        TODO Ørjan
   -->
 
-<!-- ####  ØRJAN - SLUTT  #### -->
+      <!-- ####  ØRJAN - SLUTT  #### -->
 
-
-<!-- ==========================================================================
+      <!-- ==========================================================================
      ####  SEBASTIAN - START  ####
      branch: sebastian
      CSS:    css/sebastian.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 5: KORT ----------
+      <!-- ---------- SEKSJON 5: KORT ----------
        Innhold ifølge designbildet:
          - to kort side ved side
          - hvert kort: bakgrunnsbilde med tittel og tekst sentrert oppå
        TODO Sebastian
   -->
 
-
-  <!-- ---------- SEKSJON 6: BANNER ----------
+      <!-- ---------- SEKSJON 6: BANNER ----------
        Innhold ifølge designbildet:
          - ett bilde i full bredde, uten container
          - bildetekst nede til høyre
        TODO Sebastian
   -->
 
+      <!-- ####  SEBASTIAN - SLUTT  #### -->
 
-<!-- ####  SEBASTIAN - SLUTT  #### -->
+      <!-- FELLES: her lukkes <main>. Footeren hører ikke hjemme inni den. -->
+    </main>
 
-
-<!-- FELLES: her lukkes <main>. Footeren hører ikke hjemme inni den. -->
-</main>
-
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
      ####  SEBASTIAN - FOOTER START  ####
      branch: sebastian
      CSS:    css/sebastian.css
      ========================================================================== -->
 
-  <!-- ---------- SEKSJON 7: FOOTER ----------
+    <!-- ---------- SEKSJON 7: FOOTER ----------
        Bruk <footer> som ytterste element her.
        Innhold ifølge designbildet:
          - copyright til venstre
@@ -151,8 +302,6 @@
        TODO Sebastian
   -->
 
-<!-- ####  SEBASTIAN - FOOTER SLUTT  #### -->
-
-
-</body>
+    <!-- ####  SEBASTIAN - FOOTER SLUTT  #### -->
+  </body>
 </html>
